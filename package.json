@@ -1,0 +1,23 @@
+{
+  "name": "gps-data-normalization",
+  "version": "1.0.0",
+  "description": "",
+  "main": "naive_distance_calulation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Innovatube/GPS-data-normalization.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Innovatube/GPS-data-normalization/issues"
+  },
+  "homepage": "https://github.com/Innovatube/GPS-data-normalization#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "geolib": "^2.0.22"
+  }
+}
