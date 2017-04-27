@@ -15,6 +15,7 @@ xmlParse(
 			var isHanoi = false;
 			var tags;
 
+			if(file.$.filename.split('/')[0] == "public") continue;
 			if(!file.tags) continue;
 
 			tags = file.tags[0].tag;
