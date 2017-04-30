@@ -18,5 +18,8 @@ console.log("Area: ", testArea[3].name);
 console.log("\n\nTraveled distance within area: ",
  			effectiveDistance(testJourney.tracking, testArea[3]), "meters");
 
-console.log("\n\nPlease test using mymaps.google.com and GPX Files",
+console.log("\n\nThe journey can be visualised by feeding mymaps.google.com with GPX Files",
 	"stored here https://drive.google.com/open?id=0B2CtrMfIV7ixcDNJVWRmd0JJNGs");
+
+console.log("\nThis is the visualised map for this single case only: \n"+
+	"https://drive.google.com/open?id=1KnnzRRiBMhqeulnycbcsPTfgNAI&usp=sharing");
