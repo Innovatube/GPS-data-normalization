@@ -32,23 +32,23 @@ function effectiveDistance(journey, area) {
                {latitude: journey[i-1].lat, longitude: journey[i-1].lon}
             );
             total += displacement;
-            console.log(journey[i-1].time + ": ",
-                "(" + journey[i-1].lon + ", " + journey[i-1].lat + ")",
-                "->",
-                "(" + journey[i].lon + "," + journey[i].lat + ")", 
-                "\td = " + displacement + "m");
+            // console.log(journey[i-1].time + ": ",
+            //     "(" + journey[i-1].lon + ", " + journey[i-1].lat + ")",
+            //     "->",
+            //     "(" + journey[i].lon + "," + journey[i].lat + ")", 
+            //     "\td = " + displacement + "m");
         }
         prevInside = currInside;
     }
     return total;
 }
 
-function planarDistance(x1, y1, x2, y2){
-    return Math.sqrt(
-        Math.pow(Math.abs(x1-x2) + 1, 2) +
-        Math.pow(Math.abs(y1-y2) + 1, 2)
-    );
-}
+// function planarDistance(x1, y1, x2, y2){
+//     return Math.sqrt(
+//         Math.pow(Math.abs(x1-x2) + 1, 2) +
+//         Math.pow(Math.abs(y1-y2) + 1, 2)
+//     );
+// }
 
 //determine if a point is inside a polygon
 function isInsidePolygon(point, polygon) {
