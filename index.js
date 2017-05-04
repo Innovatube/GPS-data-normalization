@@ -23,3 +23,41 @@ console.log("\n\nThe journey can be visualised by feeding mymaps.google.com with
 
 console.log("\nThis is the visualised map for this single case only: \n"+
 	"https://drive.google.com/open?id=1KnnzRRiBMhqeulnycbcsPTfgNAI&usp=sharing");
+
+console.log("\n\n============================================");
+console.log("Compare to STRAVA sporting activitiy tracking:\n");
+
+console.log("Strava distance: 7km - https://www.strava.com/activities/970043522\n");
+
+var homeToInnovatube = require('./processGeoJSON')(
+	JSON.parse(fs.readFileSync('GPS_data/Home_to_innovatube.geojson'))
+);
+
+var trackAllArea = {
+	"name" : "this area represents the universe",
+	"boundary" : [
+		{lon: 0, lat: 0},
+		{lon: 0, lat: Number.MAX_VALUE},
+		{lon: Number.MAX_VALUE, lat: Number.MAX_VALUE},
+		{lon: Number.MAX_VALUE, lat: 0}	
+	]
+}
+
+console.log("Calculated distance by this program: ", 
+	effectiveDistance(homeToInnovatube, trackAllArea) + "m"
+);
+
+console.log("Google Map distance: 6.9km - https://goo.gl/WH0kAM");
+
+console.log(
+	"\nCalculated distance by http://utrack.crempa.net:\n",
+	"Flat distance (without elevation): 5.7km\n",
+	"Total distance: 7km");
+
+console.log(
+	"\nConslusion: our algorithm runs correctly for flat distance, and the different from STRAVA is that we do not consider elevation.");
+
+console.log(
+	"\nRecommendation: We have 2 options:\n",
+	"1. Ignore elevation\n",
+	"2. Add elevation in our dataset\n");

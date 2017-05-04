@@ -88,7 +88,7 @@ function earthDistance($lat1, $lon1, $lat2, $lon2) {
 	return $earthRadiusKm * $c;
 }
 
-// return distance between two points in a plane, in kilometer
+// return distance between two points in a plane
 function planarDistance($x1, $y1, $x2, $y2) {
 	return sqrt(
 		pow(abs($x1 - $x2) + 1, 2) +
